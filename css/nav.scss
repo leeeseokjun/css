@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+$back: #20415c;
+
+@mixin flex($display, $justify, $align){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    @include flex(flex, center, center);
+    min-height: 100vh;
+    background-color: $back;
+}
+
+.navigation{
+    position: relative;
+    @include flex(flex, center, center);
+    .menuToggle{
+        position: relative;
+        width: 65px;
+        height: 65px;
+        background: #ff4886;
+        border: 5px solid $back;
+        border-radius: 50%;
+        cursor: pointer;
+        @include flex(flex, center, center);
+        z-index: 10;
+        &::before{
+            content: '+';
+            position: absolute;
+            font-size: 3em;
+            color: #fff;
+            transition: 1.6s;
+        }
+        &:hover::before{
+            transform: rotate(225deg);
+        }
+    }
+}
