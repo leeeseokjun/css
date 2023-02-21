@@ -39,7 +39,7 @@ $("document").ready(function () {
         scrollTrigger : {
             scrub : true
         },
-        x: 100,
+        x: 150,
     })
     gsap.from("#house",{
         scrollTrigger : {
