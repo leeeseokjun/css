@@ -231,3 +231,187 @@ header{
         font-size: 1.2em;
     }
 }
+
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    header{
+        padding: 20px 50px;
+        ul{
+            display: none;
+        }
+    }
+    #home{
+        padding: 150px 50px;
+        flex-direction: column;
+        padding-bottom: 0;
+        .content{
+            h2{
+                font-size: 4em;
+            }
+        }
+        .men{
+            position: absolute;
+            height: 50vh;
+            right: 70px;
+        }
+    }
+    .btn{
+        max-width: 160px;
+        padding: 10px 20px;
+    }
+    .secText{
+        h2{
+            font-size: 2em;
+            text-align: center;
+        }
+    }
+    #services, #portfolio, #contanct{
+        padding: 100px 50px;
+        .content{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .menuToggle{
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &::before{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform: translateY(-10px);
+            transition: 0.5s;
+            box-shadow: 0 10px #fff;
+        }
+        &::after{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform: translateY(10px);
+            transition: 0.5s;
+        }
+    }
+    header.active{
+        ul{
+            position: fixed;
+            left: 0;
+            top: 84px;
+            width: 100%;
+            height: calc(100vh - 84px);
+            background: rgba(50, 50, 50, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1000;
+            gap: 20px;
+            li{
+                a{
+                    font-size: 2em;
+                }
+            }
+        }
+        .menuToggle::before{
+            transform: translateY(0px) rotate(45deg);
+            box-shadow: 0 0 #fff;
+        }
+        .menuToggle::after{
+            transform: translateY(0px) rotate(315deg);
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #home{
+        
+        .content{
+            h2{
+                font-size: 3em;
+            }
+        }
+        &::before{
+            width: 80vw;
+            height: 40vw;
+            border-top-right-radius: 80vw;
+            border-top-left-radius: 80vw;
+        }
+        .men{
+            height: 40vh;
+        }
+    }
+    #services, #portfolio, #contanct{
+        .content{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    header{
+        padding: 20px 50px;
+        ul{
+            display: none;
+        }
+    }
+    .menuToggle{
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &::before{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform: translateY(-10px);
+            transition: 0.5s;
+            box-shadow: 0 10px #fff;
+        }
+        &::after{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform: translateY(10px);
+            transition: 0.5s;
+        }
+    }
+    header.active{
+        ul{
+            position: fixed;
+            left: 0;
+            top: 84px;
+            width: 100%;
+            height: calc(100vh - 84px);
+            background: rgba(50, 50, 50, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1000;
+            gap: 20px;
+            li{
+                a{
+                    font-size: 2em;
+                }
+            }
+        }
+        .menuToggle::before{
+            transform: translateY(0px) rotate(45deg);
+            box-shadow: 0 0 #fff;
+        }
+        .menuToggle::after{
+            transform: translateY(0px) rotate(315deg);
+        }
+    }
+}
