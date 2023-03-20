@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px;
+  background: #fff;
+  transition: 0.5s;
+}
+.banner.night {
+  background: #333;
+}
+.banner.night .logo {
+  color: #fff;
+}
+.banner.night ul li a {
+  color: #fff;
+}
+.banner.night .content h3, .banner.night .content h2, .banner.night .content p, .banner.night .content button.chat {
+  color: #fff;
+}
+.banner.night .sci li a:hover {
+  color: #2196f3;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  width: 150px;
+  height: 150px;
+  background: url(/images/dotted.png);
+  background-size: cover;
+  animation: animateColor 10s linear infinite;
+  transition-delay: -5s;
+}
+.banner header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner header .logo {
+  color: #333;
+  font-size: 2em;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.banner header .logo span {
+  color: #2196f3;
+}
+.banner header ul {
+  display: flex;
+  gap: 40px;
+}
+.banner header ul li a {
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #333;
+}
+.banner .content {
+  position: relative;
+  max-width: 700px;
+  z-index: 10;
+}
+.banner .content h3 {
+  font-size: 2em;
+  color: #333;
+  font-weight: 200;
+  transition: 0.5s;
+}
+.banner .content h2 {
+  font-size: 5.5em;
+  color: #333;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.banner .content h2 > span {
+  color: #e91e63;
+}
+.banner .content p {
+  font-size: 1.2em;
+  color: #666;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+.banner .content button {
+  position: relative;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 15px 35px;
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  margin-right: 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.banner .content .chat {
+  background: transparent;
+  color: #333;
+}
+.banner .content .chat ion-icon {
+  position: relative;
+  color: #e91e63;
+  font-size: 1.5em;
+}
+.banner .sci {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 20px;
+}
+.banner .sci li a {
+  font-size: 1.75em;
+  color: #333;
+}
+.banner .sci li a:hover {
+  color: #2196f3;
+}
+.banner .dayNight {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 2em;
+}
+.banner .dayNight ion-icon:nth-child(2) {
+  display: none;
+}
+.banner.night .dayNight ion-icon:nth-child(1) {
+  display: none;
+}
+.banner.night .dayNight ion-icon:nth-child(2) {
+  display: block;
+}
+.banner .colors {
+  position: absolute;
+  right: 0;
+  max-width: 800px;
+  animation: animateColor 8s ease-in-out infinite;
+}
+@keyframes animateColor {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+}
+.banner .men {
+  position: absolute;
+  right: 180px;
+  bottom: 0;
+  max-height: 85vh;
+  animation: animateMen 8s ease-in-out infinite;
+}
+@keyframes animateMen {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+}/*# sourceMappingURL=portfolio2.css.map */
